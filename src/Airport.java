@@ -49,7 +49,13 @@ public class Airport {
 
                 // grab flight number
                 System.out.println("Please enter a flight number:");
-                int flightNumber = Integer.parseInt(input.nextLine());
+                int flightNumber;  // declare var
+                try {
+                    flightNumber = Integer.parseInt(input.nextLine());  // try to parse int
+                } catch (NumberFormatException e) {
+                    System.out.println("That is not a valid flight number. \n\n");
+                    continue;  // break out if not a number
+                }
 
                 // landing option
                 if (option.equalsIgnoreCase("L")) {
