@@ -37,9 +37,13 @@ public class Airport {
 
                 // check if print option
                 else if (option.equalsIgnoreCase("P")) {
-                    runway.print();
-                    System.out.println("\n");
-                    continue;
+                    if (runway.head == null)
+                        System.out.println("Cannot print empty queue. \n\n");
+                    else {
+                        runway.print();
+                        System.out.println("\n");
+                        continue;
+                    }
                 }
 
 
@@ -69,7 +73,7 @@ public class Airport {
                         System.out.println("Flight " + flightNumber + " is not the lane ready for takeoff. \n\n");
                     }
                 }
-                
+
             // loop again if not an option
             } else {
                 System.out.println("That was not an option. \n\n");
