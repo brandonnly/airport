@@ -37,13 +37,8 @@ public class Airport {
 
                 // check if print option
                 else if (option.equalsIgnoreCase("P")) {
-                    if (runway.head == null)
-                        System.out.println("Cannot print empty queue. \n\n");
-                    else {
-                        runway.print();
-                        System.out.println("\n");
-                        continue;
-                    }
+                    runway.print();
+                    continue;
                 }
 
 

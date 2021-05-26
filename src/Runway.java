@@ -14,6 +14,12 @@ public class Runway {
 
     // iterates through the queue and prints flight numbers
     public void print() {
+        // break out if empty loop
+        if (this.head == null) {
+            System.out.println("Can not print an empty queue. \n\n");
+            return;
+        }
+        // otherwise loop through and print
         for (Plane temp = head; temp != null; temp = temp.link) {
             System.out.print("[" + temp.getFlightNumber() + "]-->");
         }
